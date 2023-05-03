@@ -1,0 +1,579 @@
+/* Allgemeine Formatierung */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { 
+  background:rgb(30,30,40); 
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+    background-color: #CC6666;
+    padding: 70px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 50px;
+    margin: 70px;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+}
+
+h2 {
+    background-color: #CC6666;
+    padding: 70px;
+    text-align: left;
+    font-size: 50px;
+    margin: 70px;
+    border-radius: 5px;
+}
+h3 {
+    font-size: 24px;
+    color: white;
+}
+
+ul {
+  color: white;
+}
+
+table {
+  color: white;
+}
+
+/* Scroll to top Button */
+#myBtn {
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px;
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #CC4949;
+  color: white; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 5px;
+  font-size: 18px; 
+}
+
+#myBtn:hover {
+  background-color: #555; 
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+    }
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    }
+            
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    }
+    
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    }
+    
+/* Dropdown Nav-bar */   
+.navbar {
+    overflow: hidden;
+    background-color: black;
+
+    }
+    
+.navbar a {
+    float: left;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+    
+.dropdown {
+    float: left;
+    overflow: hidden;
+    }
+    
+.dropdown .dropbtn {
+    font-size: 28px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 18px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    }
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #CC4949;
+    }
+    
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #CC4949;
+    z-index: 1;
+    }
+    
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    }
+    
+.dropdown-content a:hover {
+    background-color: #ddd;
+    }
+    
+.dropdown:hover .dropdown-content {
+    display: block;
+    }
+
+
+/* Startseite */
+
+.startseite p {
+  margin-left: 70px;
+  margin-right: 70px;
+ }
+/*Einführung*/
+
+/* Spalten */
+.rows-einfuehrung {  
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+/* Verhältnis der Spalten */
+.row-einfuehrung1 {   
+    flex: 60%;
+      }
+
+.row-einfuehrung1 p, .row-einfuehrung1 h3 {
+   margin: 70px;
+}
+
+.row-einfuehrung2 {
+    flex: 40%;
+}
+ 
+/* Überschriften der Spalten */
+.row-einfuehrung1 h2 {
+  border-radius: 5px;
+
+
+}
+
+.row-einfuehrung2 h2{
+    background-color:#CC6666;
+    padding: 70px;
+    text-align: left;
+    font-size: 50px;
+    margin: 0;
+    border-radius: 0;
+}
+
+.row-einfuehrung2 p, .row-einfuehrung2 h3 {
+  color: black;
+}
+
+/* Timeline */
+* {
+    box-sizing: border-box;
+}
+
+/* Set a background color */
+.timeline {
+    background-color: #CC6666;
+    font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgb(30,30,40);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position:relative;
+  background-color: inherit;
+  width: 50%;
+  background-color: #CC6666;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #CC6666;
+  border: 4px solid rgb(30,30,40);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+/* Methode */
+
+/* Spalten */
+.rows-methode {  
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+/* Verhältnis der Spalten */
+.row-methode1 {   
+    flex: 70%;
+
+      }
+
+.row-methode2 {
+    flex: 30%;
+    margin-left: 150px;
+  }
+
+  .row-methode1 p, .row-methode1 h3, .row-methode1 ul {
+    margin-left: 70px;
+  }
+
+  ul {
+    font-size: 20px;
+  }
+
+  /* Bilder */
+  img {
+    padding-bottom: 70px;
+  }
+  
+  /* Text der Bilder */
+  .image-text-methode {
+    position: relative;
+  }
+
+  .image-text-block-methode {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    background-color: #CC6666;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+  }
+
+/* Resultate */
+.rows-resultate {
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  
+}
+
+.rows-resultate {
+  display: flex;
+}
+
+.rows-resultate h3 {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(30,30,40);
+  color: #CC6666;
+}
+.row-resultate1, .row-resultate2, .row-resultate3, .row-resultate4 {
+  flex: 25%;
+  border: hidden ;
+  border-radius: 5px;
+  margin-left: 40px;
+}
+
+.leeres-Tabellenelement {
+  background-color: #CC6666;
+}
+.rows-resultate table {
+  background-color: rgb(30,30,40);
+  border-collapse: collapse;
+}
+.rows-resultate td {
+  border: #CC6666 solid;
+  padding: 15px;
+}
+
+.row-resultate1 {
+  margin-left: 70px;
+}
+
+.row-resultate4 {
+  margin-right: 70px;
+}
+
+.oel, .wasser {
+  font-weight: bold;
+}
+
+/* Auswertung */
+
+/* Kontakt */
+
+/* Formular */
+form { 
+  max-width:420px; 
+  margin:50px auto; 
+  font-size: 28px;
+}
+
+.feedback-input {
+  color:white;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  font-size: 20px;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  resize:vertical;
+}
+
+[type="submit"] {
+    width: 100%;
+    background:#CC6666;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+  }
+  [type="submit"]:hover { background:#CC4949; }
+
+/* Quiz */
+
+/* Spalten */
+.rows-quiz {
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  display: flex;
+  margin-left: 70px;
+}
+
+.row-quiz1, .row-quiz2, .row-quiz3 {
+  flex: 33%;
+}
+/* Callout box - fixed position at the bottom of the page */
+.callout {
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+
+/* Callout header */
+.callout-header {
+  padding: 25px 15px;
+  background: #CC4949;
+  font-size: 30px;
+  color: white;
+}
+
+/* Callout container/body */
+.callout-container {
+  padding: 15px;
+  background-color: #CC6666;
+  color: black;
+}
+
+/* Close button */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Change color on mouse-over */
+.closebtn:hover {
+  color: lightgrey;
+}
+
+
+.flip-box h2 { 
+  padding: 20;
+  margin: 0;
+  border-radius: 5px;
+}
+.flip-box {
+  margin-bottom: 70px;
+  border-radius: 5px;
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color: #CC6666;
+  color: black;
+  border-radius: 5px;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color:#CC4949;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 5px;
+}
